@@ -1,3 +1,4 @@
+# Please refer to https://humblesec.wordpress.com/2016/12/08/escaping-a-restricted-shell/ if you have no idea on what's this about
 import socket
 import sys
 import paramiko
