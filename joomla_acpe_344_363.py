@@ -2,6 +2,8 @@
 # https://developer.joomla.org/security-centre/659-20161001-core-account-creation.html
 # https://developer.joomla.org/security-centre/660-20161002-core-elevated-privileges.html
 
+# A smart exploit that takes all the chances there to exploit joomla latest vulnerability.
+
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 import requests
