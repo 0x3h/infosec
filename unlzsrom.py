@@ -2,12 +2,12 @@
 # https://gist.github.com/w4kfu/3a9772156901e5717ec7
 # https://github.com/alguien-gh/scripts/blob/master/exploits/rom0x/rom0x.sh
 # http://reverseengineering.stackexchange.com/questions/3662/backup-from-zynos-but-can-not-be-decompressed-with-lzs
-# 
+
 # The only way available to decompress the specific rom file was online with routerpwn.com/zynos/ i think that they are
 # using the c program linked bellow under the hood for decompression; I wrote this because i myself was looking for
 # a pure pythonic way to decompress the rom file; After a days of searching the internet for such solution i didn't find
 # any working one, But my search was not useless and i eventually i managed to came with my own solution (this).
-#
+
 # THIS WILL NOT WORK ON "ALL" ROMS; BUT YOU CAN ALWAYS LINK PYTHON AND 
 # https://github.com/alguien-gh/scripts/blob/master/exploits/rom0x/unlzs.c
 # --------------------
