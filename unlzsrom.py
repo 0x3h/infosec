@@ -6,10 +6,10 @@
 # The only way available to decompress the specific rom file was online with routerpwn.com/zynos/ i think that they are
 # using the c program linked bellow under the hood for decompression; I wrote this because i myself was looking for
 # a pure pythonic way to decompress the rom file; After a days of searching the internet for such solution i didn't find
-# any working one, But my search was not useless and i eventually i managed to came with my own solution (this).
+# any working one, But my search was not useless and eventually i managed to came with my this solution.
 
 # THIS WILL NOT WORK ON "ALL" ROMS; BUT YOU CAN ALWAYS LINK PYTHON AND 
-# https://github.com/alguien-gh/scripts/blob/master/exploits/rom0x/unlzs.c
+# https://github.com/alguien-gh/scripts/blob/master/exploits/rom0x/unlzs.c OR JUST COMPILE THE THIS
 # --------------------
 # python unlzsrom.py rom-0
 # 52574267
