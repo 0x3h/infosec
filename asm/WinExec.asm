@@ -5,7 +5,7 @@ global __start
 section .text
 
 __start:
-  cld                     ; required for block_api.asm
+  cld                    ; required for block_api.asm
   call startup
 
 delta:
