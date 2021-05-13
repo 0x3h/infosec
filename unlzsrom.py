@@ -18,12 +18,15 @@
 # public
 # public
 
+import os
+import os.path
 import sys
 import re
 
 # Lempel-Ziv-Stac (LZS) decompression
 # Implementation found in sciw.exe
  
+# create class LZSBitReader:
 class LZSBitReader:
 	def __init__(self, bytes):
 		self.bytes = bytes
